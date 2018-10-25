@@ -12,7 +12,7 @@ These [hints](https://github.com/BYUCS260/Lab4-NodeREST/wiki/Cities-REST-Service
 
 Once you have the getcity service working, 
 implement a proxy for the [Owlbot](https://owlbot.info/api/v1/dictionary/owl) api that will allow the user to search for a word and see the definition. 
-These [hints](https://github.com/mjcleme/node-api-server-tutorial#cors-issues) may be useful to make it easy to do.
+These [hints](https://github.com/mjcleme/node-api-server-tutorial#cors-issues) may be useful.
 
 When you're finished, you should run your node application with something like:
 
