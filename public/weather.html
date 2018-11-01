@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>City Finder</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href = "stylesheets/style.css"/>
+
+</head>
+<body>
+  <div class = "cityFinder">
+    <h2>City Finder</h2>
+<form class = "userEntry">
+Enter A Utah City: <input type="text" id="cityfield" value=""><br>
+Suggestion: <div id="txtHint">Empty</div>
+</form>
+<script>
+$( "#cityfield" ).keyup(function() {
+  var url = "getcity?q="+$("#cityfield").val();
+  $.getJSON(url,function(data) {
+    var everything;
+    everything = "<ul>";
+    $.each(data, function(i,item) {
+      everything += "<li> "+data[i].city;
+    });
+    everything += "</ul>";
+    $("#txtHint").html(everything);
+  });
+});
+
+</script>
+</div>
+<div class = "owlDictionary">
+  <h2>Owl Dictionary</h2>
+<form class = "userEntry">
+    Enter a word: <input type="text" id="owlInput" value=""><br>
+    <button id="owlbutton">Submit</button><br><br> 
+    <span id="owlOutput"></span>
+</form>
+<script>
+$("#owlbutton").click(function(event) {
+        event.preventDefault();
+        var url = "/owlbot/?q=" + $('#owlInput').val();
+        $.getJSON(url, function(data) {
+            console.log(data);
+            var everything;
+            everything = "<div>";
+            everything += "<img src=\"alberowl.jpg\" alt = \"Albert Owl\">";
+            $.each(data, function(i, item) {
+                everything += "<p>" + "Type: " + data[i].type + "<br>" + "Definition: \"" + data[i].defenition + "\"" + "</p>";
+            });
+            everything += "</div>";
+            $("#owlOutput").html(everything);
+        });
+    });
+</script>
+</div>
+</body>
+</html>

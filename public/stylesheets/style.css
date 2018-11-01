@@ -1,8 +1,41 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
 }
 
 a {
   color: #00B7FF;
+}
+
+img {
+  margin-right: 10px;
+}
+.userEntry {
+  
+  background-color: #9999ff;
+  padding: 10px;
+  border-radius: 25px;
+  
+  
+}
+
+.cityFinder {
+  
+  text-shadow: 0.5px 0.5px blue;
+  
+}
+
+.owlDictionary {
+  text-shadow: 0.5px 0.5px blue;
+  
+}
+
+#txtHint {
+  column-count: 3;
+  column-rule-style: solid;
+  column-rule-color: blue;
+  column-rule-width: 2px;
+  column-gap: 30px;
+  column-fill: balance;
 }
